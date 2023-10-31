@@ -3,8 +3,29 @@ package _01_else_if._2_crazy_cat_lady;
 
 import java.net.URI;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 public class CrazyCatLady {
 	public static void main(String[] args) {
+		JFrame frame = new JFrame("");
+		frame.setSize(0, 0);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		
+		String prompt = "How many cats so you have";
+		
+		int answer = Integer.parseInt(JOptionPane.showInputDialog(prompt));
+		
+//		int cats = Integer.parseInt(answer);
+		
+		if (answer >= 4) {
+			JOptionPane.showMessageDialog(null, "You Might Be A Crazy Cat Lady");
+		} else if (answer <4 && answer > 0) {
+			JOptionPane.showMessageDialog(null, "You Must Be A Cat Lover");
+		} else {
+			JOptionPane.showMessageDialog(null, "Cats Aren't Your Thing");
+		}
 		
 		// 1. Ask the user how many cats they have
 		// 2. Convert their answer into an int
